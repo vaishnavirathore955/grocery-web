@@ -72,7 +72,7 @@ const ProductPage = () => {
           <div className="category-grid">
             {category.items.map((item, idx) => (
               <div key={idx} className="category-item">
-                <img src={`/images/${item.img}`} alt={item.name} />
+                <img src={`${process.env.PUBLIC_URL}/images/${item.img}`} alt={item.name} />
                 <p>{item.name}</p>
               </div>
             ))}
