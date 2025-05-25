@@ -1,4 +1,3 @@
-import "./ProductPage.css"; // Optional: Add styles in a separate file
 import React from "react";
 import amul from "./images/amul.jpg";
 import amulcheese from "./images/amulcheese.jpg";
@@ -51,7 +50,6 @@ import slider2 from "./images/slider-2.png";
 import spar from "./images/spar.jpg";
 import sports from "./images/sports.jpg";
 import squid from "./images/squid.jpg";
-import sweets from "./images/sweets.jpg";
 import tea from "./images/tea.jpg";
 import tilopia from "./images/tilopia.jpg";
 import travel from "./images/travel.jpg";
@@ -113,30 +111,3 @@ const categories = [
     ],
   },
 ];
-
-const ProductPage = () => {
-  return (
-  <>
-    <div className="product-page">
-      {categories.map((category, index) => (
-        <div key={index} className="category-section">
-          <div className="category-header">
-            <h2>{category.title}</h2>
-            <a href="/see-all">See all</a>
-          </div>
-          <div className="category-grid">
-            {category.items.map((item, idx) => (
-              <div key={idx} className="category-item">
-                <img src={item.img} alt={item.name} />
-                <p>{item.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  </>
-  );
-};
-
-export default ProductPage;
