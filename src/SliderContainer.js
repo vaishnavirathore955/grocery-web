@@ -1,24 +1,18 @@
 import React from 'react';
 import ImageSlider from './ImageSlider';
+import slider1 from './images/slider-1.png';
+import slider2 from './images/slider-2.png';
+import "./slider.css";  // ✅ new css file
 
 function SliderContainer() {
   const slides = [
-    { url: "./images/slider-1.png", title: "Slider 1" },
-    { url: "./images/slider-2.png", title: "Slider 2" },
+    { url: slider1, title: "Slider 1" },
+    { url: slider2, title: "Slider 2" },
   ];
 
-  const containerStyles = {
-    width: "90%",
-    height: "180px",
-    margin: " 50px auto",
-    // margin-top
-  };
-
   return (
-    <div>
-      <div style={containerStyles}>
-        <ImageSlider slides={slides} />
-      </div>
+    <div className="slider-container">
+      <ImageSlider slides={slides} />
     </div>
   );
 }

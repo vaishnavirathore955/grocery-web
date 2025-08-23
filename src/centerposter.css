@@ -1,38 +1,101 @@
-.banner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    
-  
-    font-family: Arial, sans-serif;
-  }
-  
-  .banner-content img{
-    width: 1300px;
-    height: 200px;
-    margin-left: 100px;
-    border-radius: 10px;
-  }
-  .banner-content1 img{
-    margin: 50px 100px;
-    width: 86%;
-    height: auto;
-    border-radius: 10px;
-  }
+.banner-container,
+.banner-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+.banner-content img,
+.banner-content1 img {
+  width: 100%;              /* responsive width */
+  max-width: 1200px;       /* restrict max size */
+  height: auto;            /* maintain aspect ratio */
+  border-radius: 10px;
+}
 
   .banner-content2 img{
     width: 100%;
     height: auto;
   }
-  .banner-content3 img{
-    width: 86%;
-    height: auto;
-    margin: 0px 100px 30px 100px;
-    border-radius: 10px;
+.banner-container3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content3 img {
+  width: 86%;
+  height: auto;
+  margin: 0px auto 30px auto;  /* center align */
+  border-radius: 10px;
+  display: block; /* ensure no extra space */
+  object-fit: cover;
+}
+
+.banner-container4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-content4 img {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+@media (max-width: 1024px) {
+  .banner-content4 img {
+    margin-top: 70px;
+    max-width: 900px;
   }
-  .banner-content4 img{
-    margin-top: 100px;
+  .banner-content3 img {
+    width: 90%;
+    max-width: 900px;
+    margin: 0px auto 25px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content4 img {
+    margin-top: 50px;
+    max-width: 600px;
+  }
+  .banner-content3 img {
+    width: 95%;
+    max-width: 700px;
+    margin: 0px auto 20px auto;
+  }
+  .banner-content img,
+  .banner-content1 img {
+    width: 95%;            /* take more width on smaller screens */
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content4 img {
+    margin-top: 30px;
+    max-width: 100%;   /* mobile par pura screen le */
+    padding: 0 10px;   /* thoda side spacing */
+  }
+  .banner-content3 img {
     width: 100%;
-    height: auto;
+    max-width: 100%;
+    margin: 0px auto 15px auto;
+    border-radius: 6px; /* thoda chhota radius mobile par */
+    padding: 0 10px;   /* thoda side spacing */
   }
+  .banner-content img,
+  .banner-content1 img {
+    width: 100%;           /* full width on mobile */
+    border-radius: 6px;
+  }
+}

@@ -1,88 +1,181 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .categories {
-    padding: 20px;
-  }
-  
-  .category {
-    margin-bottom: 40px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.categories {
+  padding: 20px;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.category-header a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.category-header a:hover {
+  text-decoration: underline;
+}
+
+.items {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch; /* smooth scroll iOS */
+}
+
+.items::-webkit-scrollbar {
+  display: none;
+}
+.items {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.item {
+  flex: 0 0 auto;  /* fixed width item for scroll */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #4acdaf1c;
+}
+
+.item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.item .price {
+  color: green;
+  font-weight: bold;
+}
+
+.item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item button:hover {
+  background-color: #0056b3;
+}
+
+/* ===================== */
+/* 📱 Responsive Styles  */
+/* ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .category h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.5rem
+    font-size: 1.3rem;
   }
-  
-  .items {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-  }
-  
   .item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 180px;
   }
-  
   .item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    background-color: #4acdaf1c;
-    
+    width: 90px;
+    height: 90px;
   }
-  
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .categories {
+    padding: 15px;
+  }
+  .category h2 {
+    font-size: 1.2rem;
+  }
+  .items {
+    gap: 15px;
+  }
+  .item {
+    width: 160px;
+    padding: 8px;
+  }
+  .item img {
+    width: 80px;
+    height: 80px;
+  }
   .item h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .item p {
     font-size: 14px;
-    margin: 5px 0;
   }
-  
-  .item .price {
-    color: green;
-    font-weight: bold;
+  .item p {
+    font-size: 12px;
   }
-  
   .item button {
-    background-color: #007bff;
-    color: white;
-    border: none;
+    font-size: 13px;
     padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
   }
-  
-  .item button:hover {
-    background-color: #0056b3;
-  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
   .category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
+  .items {
+    gap: 10px;
+  }
+  .item {
+    width: 140px;
+  }
+  .item img {
+    width: 70px;
+    height: 70px;
+  }
+  .item h3 {
+    font-size: 13px;
+  }
+  .item p {
+    font-size: 11px;
+  }
+  .item button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

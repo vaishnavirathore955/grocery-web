@@ -2,16 +2,24 @@ import React, { useState } from 'react';
 import './order.css';
 
 const Orderpage = () => {
-  // State to track form data
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone1: '',
+    phone2: '',
+    address1: '',
+    address2: '',
+    city: '',
+    country: '',
+    cityCode: '',
     product: '',
     quantity: 1,
-    address: '',
+    deliveryToday: '',
+    instruction: '',
+    payment: '',
   });
 
-  // Handler to update form data in state
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -20,246 +28,176 @@ const Orderpage = () => {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Order Submitted:', formData);
-    // You can add further logic here like sending the form data to a server
   };
 
   return (
-    <>
-    <div className="order-form" >
+    <div className="order-form">
       <h1>Order Form</h1>
       <form onSubmit={handleSubmit}>
+        
         {/* Name */}
-        <div >
-          <label htmlFor="name" className='name'> Name :</label>
-          <input 
+        <label>Name :</label>
+        <div className="form-row">
+          <input
             type="text"
-            className="name1"
-            name="name"
-            placeholder='first'
-            value={formData.name}
+            name="firstName"
+            placeholder="First"
+            value={formData.firstName}
             onChange={handleChange}
             required
           />
-          <input 
+          <input
             type="text"
-            className="name1"
-            name="name1"
-            placeholder='last'
-            value={formData.name}
+            name="lastName"
+            placeholder="Last"
+            value={formData.lastName}
             onChange={handleChange}
             required
           />
         </div>
 
         {/* Email */}
-        <div id='Email'>
-          <label htmlFor="email" id='email1'>Email :</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div >
-          <label htmlFor="phone" id='address1'>phone :</label>
-          <input
-            type="address"
-            id="address"
-            name="address"
-            placeholder='phone1'
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="address"
-            id="address"
-            name="address"
-            placeholder='phone2'
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div >
-          <label htmlFor="address" id='address1'>Address :</label>
-          <input
-            type="address"
-            id="address"
-            name="address"
-            placeholder='Address1'
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="address"
-            id="address"
-            name="address"
-            placeholder='Address2'
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
+        <label>Email :</label>
         <input
-            type=""
-            id="add"
-            name=""
-            placeholder='city'
-            value={formData.email}
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        {/* Phone */}
+        <label>Phone :</label>
+        <div className="form-row">
+          <input
+            type="text"
+            name="phone1"
+            placeholder="Phone 1"
+            value={formData.phone1}
             onChange={handleChange}
             required
           />
-
-        <select
-            id="add"
-            name="product"
-            value={formData.product}
-            onChange={handleChange}
-            required
-          >
-            <option value="">country</option>
-            <option value="Product1">Product 1</option>
-            <option value="Product2">Product 2</option>
-            <option value="Product3">Product 3</option>
-          </select>
           <input
-            type=""
-            id="add"
-            name=""
-            placeholder='city code'
-            value={formData.email}
+            type="text"
+            name="phone2"
+            placeholder="Phone 2"
+            value={formData.phone2}
             onChange={handleChange}
-            required
           />
         </div>
 
-        {/* Product Selection */}
-        <div>
-          <label htmlFor="product" id='product'>Product :</label>
+        {/* Address */}
+        <label>Address :</label>
+        <div className="form-row">
+          <input
+            type="text"
+            name="address1"
+            placeholder="Address 1"
+            value={formData.address1}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="address2"
+            placeholder="Address 2"
+            value={formData.address2}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-row">
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            value={formData.city}
+            onChange={handleChange}
+            required
+          />
           <select
-            id="product1"
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Country</option>
+            <option value="IN">India</option>
+            <option value="US">USA</option>
+          </select>
+          <input
+            type="text"
+            name="cityCode"
+            placeholder="City Code"
+            value={formData.cityCode}
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* Product */}
+        <label>Product :</label>
+        <div className="form-row">
+          <select
             name="product"
             value={formData.product}
             onChange={handleChange}
             required
           >
-            <option value="">Select a product</option>
-            <option value="Product1">Product 1</option>
-            <option value="Product2">Product 2</option>
-            <option value="Product3">Product 3</option>
+            <option value="">Select</option>
+            <option value="p1">Product 1</option>
+            <option value="p2">Product 2</option>
           </select>
-          <label htmlFor="quantity" id='quantity'>Quantity :</label>
           <input
             type="number"
-            id="quantity1"
             name="quantity"
             min="1"
             value={formData.quantity}
             onChange={handleChange}
             required
           />
+        </div>
 
-<label id='radio'>Delivery today :</label>
-<label >
-        <input
-          type="radio"
-          name="option"
-          id='radio1'
-          value="option1"
+        {/* Delivery Today */}
+        <label>Delivery today :</label>
+        <div className="radio-group">
+          <label><input type="radio" name="deliveryToday" value="yes" onChange={handleChange} /> Yes</label>
+          <label><input type="radio" name="deliveryToday" value="no" onChange={handleChange} /> No</label>
+        </div>
+
+        {/* Instruction */}
+        <label>Additional Instruction :</label>
+        <textarea
+          name="instruction"
+          placeholder="(optional)"
+          value={formData.instruction}
           onChange={handleChange}
         />
-        Yes
-      </label>
 
-      <label>
-        <input
-          type="radio"
-          name="option"
-          value="option2"
-          id='radio1'
-          onChange={handleChange}
-        />
-        No
-      </label>
-
-      
-      
-
-      
-        </div>
-        <div id='instruction'>
-          <label htmlFor="instruction" id='instruction'>Additional instruction :</label>
-          <input
-            type="instruction"
-            id="instruction1"
-            name="instruction"
-            placeholder='( optional )'
-            value={formData.email}
-            onChange={handleChange}
-            optional
-          />
-          </div>
-
-        {/* Submit Button */}
-        <label id='payy' style={{marginTop:"30px"}}>Payment section :</label>
-        <label >
-        <input
-          type="radio"
-          name="option"
-          id='radio1'
-          value="option1"
-          onChange={handleChange}
-        />
-        Cash
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          name="option"
-          value="option2"
-          id='radio1'
-          onChange={handleChange}
-        />
-        online
-      </label>
-
-      
-        <div id='payment' class='ps-5'>
-          <br/>
-          <label className='mt-2'>Delivery fees :</label>
-          &emsp;&emsp;<label>$10.00</label><br/><br/>
-          <label>subtotal :</label>
-          &emsp;&emsp;&emsp;&emsp;&nbsp;<label>$10.00</label>
-        </div>
-        <div class='bg'>
-          <hr class='hr'></hr>
-        </div>
-        <div id='amount' class='ps-5'>
-          <label>Amount Due :</label>
-          &emsp;&emsp;<label>$10.00</label>
+        {/* Payment Section */}
+        <label>Payment method :</label>
+        <div className="radio-group">
+          <label><input type="radio" name="payment" value="cash" onChange={handleChange} /> Cash</label>
+          <label><input type="radio" name="payment" value="online" onChange={handleChange} /> Online</label>
         </div>
 
-       
-        <div id='btn'>
-          <button type="submit"  id='submiit1'> Order cancel</button>
-          <button type="submit" id='submit'> Order Now</button>
+        <div className="summary">
+          <div className="summary-row"><span>Delivery fees:</span><span>$10.00</span></div>
+          <div className="summary-row"><span>Subtotal:</span><span>$10.00</span></div>
         </div>
-       
+        <div className="summary total">
+          <div className="summary-row"><strong>Amount Due:</strong><strong>$20.00</strong></div>
+        </div>
+
+        {/* Buttons */}
+        <div id="btn">
+          <button type="button" id="submiit1">Cancel</button>
+          <button type="submit" id="submit">Order Now</button>
+        </div>
       </form>
     </div>
-
-    </>
   );
 };
 

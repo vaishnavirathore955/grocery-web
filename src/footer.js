@@ -95,7 +95,7 @@ function Footer(){
         <div class="footer1">
         <div>
             <div className="img">
-                <img src={first}></img>
+                <img src={first} alt="first"></img>
                 <div>
                     <li>we 8 brings its customers low prices every day. We offer a <br></br>wide choice covering fresh & packaged food, grains, pulses,<br></br> dairy, frozen, plastics, utensils, crockery, travel, stationery, & <br></br>more. SPAR has 13,900 stores in 48 countries. In India, SPAR<br></br> has 23 stores across 8 cities.</li>
                 </div>
