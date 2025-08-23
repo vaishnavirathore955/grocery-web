@@ -85,13 +85,11 @@
 
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
     align-items: flex-start;
     padding: 40px 20px;
   }
 
   .footer1 {
-    flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 30px;
@@ -105,6 +103,7 @@
 
 @media (max-width: 480px) {
   .footer {
+    flex-direction: column;
     padding-top: 40px;
   }
 

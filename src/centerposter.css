@@ -37,23 +37,16 @@
 
 .banner-container4 {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.banner-content4 img {
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
+  height: 80vh;
+  background-image: url("./Image/image5.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 1024px) {
-  .banner-content4 img {
-    margin-top: 70px;
-    max-width: 900px;
+  .banner-container4 {
+    background-size: contain;
   }
   .banner-content3 img {
     width: 90%;
@@ -63,9 +56,8 @@
 }
 
 @media (max-width: 768px) {
-  .banner-content4 img {
-    margin-top: 50px;
-    max-width: 600px;
+  .banner-container4 {
+    height: 60vh;
   }
   .banner-content3 img {
     width: 95%;
@@ -81,17 +73,14 @@
 }
 
 @media (max-width: 480px) {
-  .banner-content4 img {
-    margin-top: 30px;
-    max-width: 100%;   /* mobile par pura screen le */
-    padding: 0 10px;   /* thoda side spacing */
+  .banner-container4 {
+    height: 35vh;
   }
   .banner-content3 img {
     width: 100%;
     max-width: 100%;
     margin: 0px auto 15px auto;
     border-radius: 6px; /* thoda chhota radius mobile par */
-    padding: 0 10px;   /* thoda side spacing */
   }
   .banner-content img,
   .banner-content1 img {
