@@ -87,9 +87,6 @@ function Footer(){
 		</div>
 
         <div>
-        <div>
-            <hr class="hr"></hr>
-        </div>
     </div>
 
         <div class="footer1">
@@ -108,30 +105,41 @@ function Footer(){
             </div>
         </div>
 
-        <div>
-            <ul>
-                <li>Your Accounts</li><br></br>
-                <li>FAQ</li><br></br>
-                <li>Store list</li><br></br>
-            </ul>    
-        </div>
 
         <div>
-            <ul>
-                <li>Share feedback</li><br></br>
-                <li>Help & support</li><br></br>
-                <li>Call us</li><br></br>
-            </ul>    
+        <div className='footer-side'>
+            <div>
+                <ul>
+                    <li>Your Accounts</li><br></br>
+                    <li>FAQ</li><br></br>
+                    <li>Store list</li><br></br>
+                </ul>    
+            </div>
+
+            <div>
+                <ul>
+                    <li>Share feedback</li><br></br>
+                    <li>Help & support</li><br></br>
+                    <li>Call us</li><br></br>
+                </ul>    
+            </div>
+
+            <div>
+                <ul>
+                    <li>About us</li><br></br>
+                    <li>Term</li><br></br>
+                    <li>Privacy policy</li><br></br>
+                    <li>Return & Refund policy</li><br></br>
+                </ul>    
+            </div>
         </div>
 
-        <div>
-            <ul>
-                <li>About us</li><br></br>
-                <li>Term</li><br></br>
-                <li>Privacy policy</li><br></br>
-                <li>Return & Refund policy</li><br></br>
-            </ul>    
+        <div className='copy-right'>
+            <p>Copyright © TEHZEEB JAHAN 2024. All rights reserved.</p>
         </div>
+
+        </div>
+
         </div>
         
 	</footer>

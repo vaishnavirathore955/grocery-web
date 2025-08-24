@@ -27,7 +27,7 @@ body {
 }
 
 .category-header a {
-  color: #007bff;
+  color: orange;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -89,17 +89,19 @@ body {
 }
 
 .item button {
-  background-color: #007bff;
+  background-color: orange;
   color: white;
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
+  border: 1px solid orange;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .item button:hover {
-  background-color: #0056b3;
+  background-color: darkorange;
+  border: 1px solid darkorange;
 }
 
 /* ===================== */

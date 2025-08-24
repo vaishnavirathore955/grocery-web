@@ -5,7 +5,8 @@
   justify-content: space-evenly;
   align-items: start;
   flex-wrap: wrap;   
-  gap: 30px;         
+  gap: 30px; 
+  border-bottom: 1px solid #ccc;        
 }
 
 .footer div li {
@@ -70,6 +71,22 @@
   color: black;
 }
 
+.footer-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: self-start;
+}
+
+.footer-side div {
+  margin-right: 30px;
+}
+
+.copy-right {
+  color: rgb(110, 115, 119);
+  font-size: 14px;
+}
+
 @media (max-width: 1024px) {
   .footer {
     justify-content: flex-start;
@@ -118,5 +135,9 @@
   .footer1 div i {
     font-size: 18px;
     padding: 8px;
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 10px;
   }
 }
