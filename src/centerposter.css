@@ -1,0 +1,38 @@
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+  
+    font-family: Arial, sans-serif;
+  }
+  
+  .banner-content img{
+    width: 1300px;
+    height: 200px;
+    margin-left: 100px;
+    border-radius: 10px;
+  }
+  .banner-content1 img{
+    margin: 50px 100px;
+    width: 86%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .banner-content2 img{
+    width: 100%;
+    height: auto;
+  }
+  .banner-content3 img{
+    width: 86%;
+    height: auto;
+    margin: 0px 100px 30px 100px;
+    border-radius: 10px;
+  }
+  .banner-content4 img{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+  }

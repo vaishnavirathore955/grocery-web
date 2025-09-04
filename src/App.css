@@ -1,0 +1,15 @@
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+
+  font-family: Arial, sans-serif;
+}
+
+.banner-content img{
+  width: 100%;
+  height: auto;
+}
+

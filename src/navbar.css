@@ -1,0 +1,118 @@
+.navbar {
+   display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px 20px;
+  color: black;
+  background-color: #f5f5f5;
+}
+.navbar1{
+  border-bottom: 1px solid #ccc;
+}
+ .megha{
+  display: flex;
+  justify-content:center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 300px;
+} 
+.megha i{
+  padding-right:10px;
+}
+
+/* List styling */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: end;
+  margin: 0;
+  padding: 0;
+  justify-content: end;
+}
+.navbar1 a {
+  color:black;
+  text-decoration: none;
+  justify-content: end;
+  padding: 10px 20px;
+}
+
+/* Logo item */
+.logo-item {
+  margin-right: 20px;
+}
+
+.logo {
+  height: 70px; /* You can adjust the logo size */
+}
+
+/* Location info styling */
+.location-info {
+  font-size: 12px;
+  color: #333;
+  margin-right: 20px;
+  padding-left: 15px;
+}
+.location-info i{
+  padding-left: 5px;
+}
+.pera{
+  font-size: medium;
+}
+
+/* Navigation link styling */
+.nav-link {
+  color:black;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 10px;
+  justify-content: end;
+}
+
+.nav-link:hover {
+  color: #000;
+  background-color:orange;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Adjustments for mobile responsiveness (optional) */
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+  }
+  .logo-item {
+    margin-bottom: 10px;
+  }
+  .nav-link {
+    margin: 5px 0;
+  }
+}
+
+  .navbar2 {
+    padding: 18px 0px 0px 0px;
+   position: sticky;
+   top: 90px;
+  } 
+  
+  .navbar2 ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center;
+    text-align: center; */
+    list-style: none;
+  }
+
+  
+  .navbar2 a {
+    color:black;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  .navbar2 a:hover {
+    background-color: orange;
+    border-radius: 5px;
+  }
+  .navbar2 img {
+    width: 35px;
+  }
+  
