@@ -135,7 +135,7 @@ function Footer(){
         </div>
 
         <div className='copy-right'>
-            <p>Copyright © TEHZEEB JAHAN 2024. All rights reserved.</p>
+            <p>Copyright © VAISHNAVI RATHORE 2024. All rights reserved.</p>
         </div>
 
         </div>
